@@ -1,0 +1,51 @@
+{
+    "name": "te7a-houdini/laravel-applicant",
+    "description": "Simple package to allow model applies and receives applications from other models",
+    "keywords": [
+        "te7a-houdini",
+        "laravel-applicant",
+        "laravel",
+        "job"
+    ],
+    "homepage": "https://github.com/Te7a-Houdini/laravel-applicant",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ahmed Abd El Ftah",
+            "email": "ahmedabdelftah95165@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "~5.5.0|~5.6.0|~5.7.0|~5.8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Te7aHoudini\\LaravelApplicant\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Te7aHoudini\\LaravelApplicant\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Te7aHoudini\\LaravelApplicant\\LaravelApplicantServiceProvider"
+            ]
+        }
+    }
+}
