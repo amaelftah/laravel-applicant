@@ -8,7 +8,7 @@ use Te7aHoudini\LaravelApplicant\Models\Application;
 trait Applicant
 {
     /**
-     * creates a new application model object for this model
+     * creates a new application model object for this model.
      *
      * @param null|array|object $model
      * @param array $criteria
@@ -19,9 +19,9 @@ trait Applicant
         $applicationType = Arr::get($criteria, 'type', Arr::get($this->applicantCriteria, 'type', 'applicant'));
 
         $applicationStatus = Arr::get($criteria, 'status', Arr::get($this->applicantCriteria, 'status', 'created'));
-        
+
         if (is_null($model)) {
-            $data =  [
+            $data = [
                 'type' => $applicationType,
                 'status' => $applicationStatus,
             ];
@@ -32,7 +32,7 @@ trait Applicant
                 $model,
                 [
                     'type' => $model['type'] ?? $applicationType,
-                    'status' => $model['status'] ?? $applicationStatus ,
+                    'status' => $model['status'] ?? $applicationStatus,
                 ]
             );
         }
@@ -46,15 +46,15 @@ trait Applicant
             ];
         }
 
-        return Application::create(array_merge($data, ['applicant_id' => $this->id,'applicant_type' => get_class($this),]));
+        return Application::create(array_merge($data, ['applicant_id' => $this->id, 'applicant_type' => get_class($this)]));
     }
 
     /**
-     * check if current model has applied on application or not
+     * check if current model has applied on application or not.
      *
      * @param null|array|object $model
      * @param array $criteria
-     * @return boolean
+     * @return bool
      */
     public function hasAppliedFor($model = null, $criteria = [])
     {
@@ -62,7 +62,7 @@ trait Applicant
     }
 
     /**
-     * get applications that model has applied on
+     * get applications that model has applied on.
      *
      * @param null|array|object $model
      * @param array $criteria
@@ -85,7 +85,7 @@ trait Applicant
                 $model,
                 [
                     'type' => $model['type'] ?? $applicationType,
-                    'status' => $model['status'] ?? $applicationStatus ,
+                    'status' => $model['status'] ?? $applicationStatus,
                 ]
             );
 
@@ -102,7 +102,7 @@ trait Applicant
     }
 
     /**
-     * sets applicantCriteria attribute and returns $this to allow fluent api
+     * sets applicantCriteria attribute and returns $this to allow fluent api.
      *
      * @param array $criteria
      * @return self
@@ -113,9 +113,9 @@ trait Applicant
 
         return $this;
     }
-    
+
     /**
-     * returns this model applied applications
+     * returns this model applied applications.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */

@@ -8,6 +8,6 @@ use Te7aHoudini\LaravelApplicant\Traits\ReceivesApplications;
 class Group extends Model
 {
     use ReceivesApplications;
-    
+
     protected $guarded = [];
 }
