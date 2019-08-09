@@ -9,11 +9,11 @@ use Te7aHoudini\LaravelApplicant\Models\Application;
 trait ReceivesApplications
 {
     /**
-     * updates application record in db
+     * updates application record in db.
      *
      * @param array|object $model
      * @param array $criteria
-     * @return boolean
+     * @return bool
      */
     public function processApplicationFrom($model, $criteria = [], $newStatus = 'processed')
     {
@@ -46,11 +46,11 @@ trait ReceivesApplications
     }
 
     /**
-     *  check if current model has received application from other model or not
+     *  check if current model has received application from other model or not.
      *
      * @param array|object $model
      * @param array $criteria
-     * @return boolean
+     * @return bool
      */
     public function hasReceivedApplicationFrom($model, $criteria = [])
     {
@@ -58,7 +58,7 @@ trait ReceivesApplications
     }
 
     /**
-     * get applications that applied on this model and this model was the receiver
+     * get applications that applied on this model and this model was the receiver.
      *
      * @param array|object $model
      * @param array $criteria
@@ -90,7 +90,7 @@ trait ReceivesApplications
     }
 
     /**
-     * sets receiverCriteria attribute and returns $this to allow fluent api
+     * sets receiverCriteria attribute and returns $this to allow fluent api.
      *
      * @param array $criteria
      * @return self
@@ -103,7 +103,7 @@ trait ReceivesApplications
     }
 
     /**
-     * returns received applications for that model
+     * returns received applications for that model.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */

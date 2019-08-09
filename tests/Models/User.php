@@ -8,6 +8,6 @@ use Te7aHoudini\LaravelApplicant\Traits\Applicant;
 class User extends Model
 {
     use Applicant;
-    
+
     protected $guarded = [];
 }

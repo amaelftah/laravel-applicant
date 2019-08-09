@@ -13,10 +13,10 @@ class TestCase extends BaseTestCase
     public $user;
 
     public $group;
-    
+
     /**
      * Setup the test environment.
-    */
+     */
     protected function setUp() :void
     {
         parent::setUp();
@@ -35,7 +35,7 @@ class TestCase extends BaseTestCase
 
         $this->user = User::create(['name' => 'testUser']);
         $this->group = Group::create(['name' => 'testGroup']);
-        
+
         include_once __DIR__.'/../database/migrations/create_applications_table.php.stub';
 
         (new \CreateApplicationsTable())->up();

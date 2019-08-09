@@ -34,7 +34,7 @@ class ApplicantTest extends TestCase
             'receiver_id' => $this->group->id,
             'receiver_type' => get_class($this->group),
         ];
-    
+
         $this->user->appliesFor($application);
 
         $this->assertEquals(
@@ -115,7 +115,7 @@ class ApplicantTest extends TestCase
             'type' => 'randomType',
             'status' => 'randomStatus',
         ])->appliesFor();
-    
+
         $this->assertEquals(
             [
                 'type' => 'randomType',
@@ -154,7 +154,7 @@ class ApplicantTest extends TestCase
             'receiver_id' => $this->group->id,
             'receiver_type' => get_class($this->group),
         ];
-    
+
         $this->user->appliesFor($application);
 
         $this->assertTrue($this->user->hasAppliedFor($application));
@@ -164,7 +164,7 @@ class ApplicantTest extends TestCase
     public function model_has_applied_using_null()
     {
         $this->user->appliesFor();
- 
+
         $this->assertTrue($this->user->hasAppliedFor());
     }
 
@@ -186,9 +186,9 @@ class ApplicantTest extends TestCase
             'type' => 'randomType',
             'status' => 'randomStatus',
         ];
-    
+
         $this->user->appliesFor();
-    
+
         $this->assertTrue($this->user->hasAppliedFor(null, ['status' => 'randomStatus', 'type' => 'randomType']));
     }
 
@@ -199,7 +199,7 @@ class ApplicantTest extends TestCase
         $this->user->appliesFor($this->group, ['type' => 'randomType']);
         $this->user->appliesFor($this->group, ['type' => 'randomType', 'status' => 'randomStatus']);
         $this->user->appliesFor($this->group);
-        
+
         $this->assertCount(2, $this->user->appliedApplicationsFor($this->group, ['type' => 'randomType'])->get());
         $this->assertCount(1, $this->user->appliedApplicationsFor($this->group, ['status' => 'randomStatus', 'type' => 'randomType'])->get());
         $this->assertCount(1, $this->user->appliedApplicationsFor($this->group)->get());
@@ -208,7 +208,7 @@ class ApplicantTest extends TestCase
     private function firstApplicationAttrs()
     {
         return Application::first()->only([
-            'type', 'applicant_id', 'applicant_type','status','receiver_id', 'receiver_type',
+            'type', 'applicant_id', 'applicant_type', 'status', 'receiver_id', 'receiver_type',
         ]);
     }
 }
