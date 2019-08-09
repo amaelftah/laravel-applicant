@@ -6,7 +6,7 @@
 <a href="https://styleci.io/repos/116058336"><img src="https://styleci.io/repos/116058336/shield" alt="StyleCI"></a>
 <a href="https://scrutinizer-ci.com/g/Te7a-Houdini/laravel-applicant/?branch=master"><img src="https://img.shields.io/scrutinizer/g/Te7a-Houdini/laravel-applicant.svg?style=flat-square" alt="Code Quality"></a>
 <a href="https://github.com/Te7a-Houdini/laravel-applicant/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/Te7a-Houdini/laravel-applicant.svg?style=flat-square" alt="License"></a>
-<a href="https://github.com/Te7a-Houdini/laravel-applicant/blob/master/LICENSE"><img src="https://img.shields.io/packagist/dt/te7ahoudini/laravel-applicant.svg?style=flat-square" alt="Downloads"></a>
+<a href="https://packagist.org/packages/te7a-houdini/laravel-applicant"><img src="https://img.shields.io/packagist/dt/Te7a-Houdini/laravel-applicant.svg?style=flat-square" alt="Downloads"></a>
 
 </p>
 
