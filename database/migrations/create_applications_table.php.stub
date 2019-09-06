@@ -14,7 +14,7 @@ class CreateApplicationsTable extends Migration
     public function up()
     {
         Schema::create(config('laravel-applicant.table_name'), function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('type')->nullable();
             $table->nullableMorphs('applicant');
             $table->nullableMorphs('receiver');
